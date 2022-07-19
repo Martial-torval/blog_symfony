@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% form_theme post_form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Hello PostController!{% endblock %}
+
+{% block body %}
+<h2 class="text-center my-5"> Add a new post below ! </h2>
+{{ form_start(post_form, {'attr':{('class'}}) }}
+
+{{ form_errors(post_form) }}
+
+{{ form_label(post_form.title)}}
+{{ form_widget(post_form.title)}}
+
+{{ form_label(post_form.content)}}
+{{ form_widget(post_form.content)}}
+
+{{ form_label(post_form.category)}}
+{{ form_widget(post_form.category)}}
+{{ form_end(post_form) }}
+{% endblock %}

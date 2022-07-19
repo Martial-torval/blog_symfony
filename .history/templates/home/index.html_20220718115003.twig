@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{# {% block head %}
+{% endblock %} #}
+
+
+{% block title %}Home{% endblock %}
+
+
+{% block body %}
+
+<h2 class="text-center my-4"> Post list </h2>
+<div class="sortBy d-flex justify-content-around my-5">
+<form class="form-filter form-control d-flex justify-content-center flex-column align-items-center w-75 mx-auto" method="post" action="{{ path('home') }}" >
+<div class="d-flex justify-content-around align-items-center">
+<select class="form-select me-5 w-100" aria-label="Default select example">
+  <option selected>Sort by</option>
+  <option value="cat">Category</option>
+  <option value="2">Release date</option>
+</select>
+<select class="form-select w-100" aria-label="Default select example">
+  <option selected>By Category</option>
+  <option value="1">Category 1</option>
+  <option value="2">Category 2</option>
+</select>
+</div>
+<input type="submit" value="Use those filters !">
+</form>
+</div>
+<div class="container">
+<div class="row col-12">
+{% for item in post %}
+<div class="col-4">
+<div class="card mb-3">
+  <img class="card-img-top" src="{{ item.illustration }}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.title }}</h5>
+    <p class="card-text">{{ item.content }}</p>
+    <p class="card-text"><small class="text-muted">Category : {{ item.category.name }}</small></p>
+    <p class="card-text"><small class="text-muted">Release date : {{item.createdAt|date("m/d/Y")}}</small></p>
+    <a href="{{ path('show', {'id' : item.id}) }}" class="text-decoration-none color-dark"> <button class="btn btn-dark">More...</button></a>
+  </div>
+</div>
+</div>
+{# 
+<h3 class="text-left mt-5 w-50 ms-3">{{ item.title }}</h3>
+<img src="{{ item.illustration }}"/> #}
+
+
+{# <p class="text-left w-50 ms-3">{{ item.content }}</p>
+</a>
+
+<span class="text-center ms-3">{{item.category.nameCategory}}</span>
+<span class="text-center ms-3">{{item.createdAt|date("m/d/Y")}}</span> #}
+{# <hr class="w-50"> #}
+{% endfor %}
+{% endblock %}
+ {% block footer %}
+{% endblock %}
+
+
+
+

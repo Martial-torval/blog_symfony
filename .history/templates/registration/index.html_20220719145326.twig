@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LoginController!{% endblock %}
+
+{% block body %}
+{{ form_start(registration_form)}}
+{{ wid(registration_form)}}
+<a href="{{path('login')}}"><span> U have an account ? Login here ! </span></a>
+{% endblock %}

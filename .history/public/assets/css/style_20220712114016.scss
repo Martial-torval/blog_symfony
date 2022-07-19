@@ -1,0 +1,23 @@
+@import '_mixin.scss';
+$bs-body-bg:red;
+* {
+    color: wheat!important;
+}
+
+form {
+    width: 70%;
+    @include mx_auto;
+}
+
+header {
+    border-bottom: 1px solid wheat;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #101820!important;
+    color: wheat!important;
+}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="d-flex flex-column align-items-center">
+<h3>{{ post.title }}</h3>
+<img src="{{ post.illustration }}" alt="img-post">
+
+<p>{{ post.content }}</p>
+<span>Category : {{ post.category.nameCategory }}</span>
+<span> Release Date : {{post.createdAt|date("m/d/Y")}}
+</section>
+
+{% endblock %}
+

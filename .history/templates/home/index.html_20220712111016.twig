@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello HomeController!{% endblock %}
+
+
+{% block body %}
+
+<h1 class="text-center"> Post list </h1>
+
+{% for item in post %}
+<a href="{{ path('show', {'id' : item.id}) }}" class="text-decoration-none color-dark">
+<h2 class="text-left mt-5 w-50 ms-3">{{ item.title }}</h2>
+<img src="{{ item.illustration }}"/>
+
+
+<p class="text-left w-50 ms-3">{{ item.content }}</p>
+</a>
+
+<span class="text-center ms-3">{{item.category.nameCategory}}</span>
+<span class="text-center ms-3">{{item.createdAt|date("m/d/Y")}}</span>
+<hr class="w-50">
+{% endfor %}
+{% endblock %}
+ {% block footer %}
+{% endblock %}
+
+

@@ -1,0 +1,11 @@
+@import '_mixin.scss';
+$bs-body-bg:red;
+form {
+    width: 70%;
+    @include mx_auto;
+}
+
+body {
+    background-color: #101820;
+    color: wheat;
+}

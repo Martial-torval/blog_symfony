@@ -1,0 +1,78 @@
+* {
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+
+.form-filter {
+  background-color: #101820!important;
+  border: none!important;
+}
+#contactForm,
+form {
+  input,
+  textarea,
+  select,
+  option {
+    background-color: #101820 !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: wheat !important;
+  }
+}
+
+#post_form_submit {
+  background-color: #101820;
+  color: wheat;
+  border: 1px solid wheat;
+}
+
+header {
+  border-bottom: 1px solid wheat;
+  text-transform: uppercase;
+  color: red !important;
+  a {
+    color: wheat !important;
+  }
+}
+
+nav > div {
+  color: wheat !important;
+}
+
+h1 {
+  color: wheat !important;
+}
+
+body {
+  background-color: #101820 !important;
+  color: wheat !important;
+}
+
+.card {
+  border: 3px solid wheat !important;
+  * {
+    color: #101820 !important;
+  }
+  .card-body {
+    background-color: #101820;
+    * {
+      color: wheat !important;
+    }
+  }
+}
+
+.sortBy {
+  option {
+    color:wheat !important;
+  }
+  span {
+    border-top: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+  }
+}
+
+.form-post {
+  wid
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+{{ post.title }}
+{{ post.content }}
+{{ post.category.nameCategory }}
+<img src="{{ post.illustration }}" alt="img-post">
+
+{% endblock %}
+

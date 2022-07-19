@@ -1,0 +1,28 @@
+* {
+    color: wheat !important;
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+
+form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    border-bottom: 1px solid wheat;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #101820 !important;
+    color: wheat !important;
+}
+
+
+/*# sourceMappingURL=style.css.map */

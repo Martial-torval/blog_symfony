@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LoginController!{% endblock %}
+
+{% block body %}
+{{ form_start(registration_form, {'attr':{'class':'w-50 mx-auto'}})}}
+{{ form_label(registration_form.username)}}
+
+{{ form_widget(registration_form.username)}}
+{{ form_label(registration_form.password)}}
+{{ form_widget(registration_form.password)}}
+
+    {{ form_widget(registration_form.submit)}}
+<a href="{{path('login')}}"><span> U have an account ? Login here ! </span></a>
+{% endblock %}
