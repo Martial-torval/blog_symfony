@@ -14,26 +14,26 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class LoginController extends AbstractController
 {
-    // #[Route('/login', name: 'login')]
-    // public function index(Request $request,EntityManagerInterface $manager): Response
-    // {
+    #[Route('/login', name: 'login')]
+    public function index(Request $request,EntityManagerInterface $manager): Response
+    {
 
-    //     $user = new User();
-    //     $form = $this->createForm(LoginFormType::class, $user);
-    //     $form->handleRequest($request);
+        $user = new User();
+        $form = $this->createForm(LoginFormType::class, $user);
+        $form->handleRequest($request);
 
-    //     if($form->isSubmitted() && $form->isValid()) {
-    //         $manager->persist($request);
-    //         $manager->flush($user);
+        if($form->isSubmitted() && $form->isValid()) {
+            $manager->persist($request);
+            $manager->flush($user);
 
-    //         return $this->redirectToRoute('home');
-    //     }
-    //     return $this->render('login/index.html.twig', [
-    //         'login_form' => $form->createView()
-    //     ]);
-    // }
+            return $this->redirectToRoute('home');
+        }
+        return $this->render('login/index.html.twig', [
+            'login_form' => $form->createView()
+        ]);
+    }
 
-    #[Route(path: '/login', name: 'login')]
+    #[Route(path: '/loginForm', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         // if ($this->getUser()) {

@@ -33,7 +33,7 @@ class LoginController extends AbstractController
     //     ]);
     // }
 
-    #[Route(path: '/login', name: 'login')]
+    #[Route(path: '/login', name: 'alogin')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         // if ($this->getUser()) {

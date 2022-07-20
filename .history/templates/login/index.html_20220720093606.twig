@@ -4,9 +4,9 @@
 
 {% block body %}
 {{ form_start(login_form)}}
-{{ form_widget(login_form.username, {'attr':{'name':'_username'}})}}
+{{ form_widget(login_form.username, {'attr':{'class':'w-50 mx-auto'}})}}
 
-{{ form_widget(login_form.password, {'attr':{'name':'_password'}})}}
+{{ form_widget(login_form.password)}}
 {{ form_end(login_form)}}
 <a href="{{path('registration')}}"><span> U dont't have an account ? Create it here ! </span></a>
 {% endblock %}
